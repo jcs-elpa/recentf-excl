@@ -32,8 +32,6 @@
 
 ;;; Code:
 
-(require 'recentf)
-
 (defgroup recentf-excl nil
   "Exclude commands for recent files."
   :prefix "recentf-excl-"

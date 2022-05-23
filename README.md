@@ -3,6 +3,8 @@
 # recentf-excl
 > Exclude commands for recent files
 
+[![CI](https://github.com/jcs-elpa/recentf-excl/actions/workflows/test.yml/badge.svg)](https://github.com/jcs-elpa/recentf-excl/actions/workflows/test.yml)
+
 WIP
 
 ## Contribute

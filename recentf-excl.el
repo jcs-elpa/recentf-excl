@@ -6,8 +6,8 @@
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; Description: Exclude commands for recent files
 ;; Keyword: excl exclude recentf
-;; Version: 0.0.1
-;; Package-Requires: ((emacs "24.3"))
+;; Version: 0.1.0
+;; Package-Requires: ((emacs "26.1"))
 ;; URL: https://github.com/jcs-elpa/recentf-excl
 
 ;; This file is NOT part of GNU Emacs.

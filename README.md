@@ -6,7 +6,19 @@
 
 [![CI](https://github.com/jcs-elpa/recentf-excl/actions/workflows/test.yml/badge.svg)](https://github.com/jcs-elpa/recentf-excl/actions/workflows/test.yml)
 
-WIP
+## 🔧 Usage
+
+First set the commands you don't want `recnetf` to track:
+
+```elisp
+(setq recentf-excl-commands '(ediff-find-file))
+```
+
+Then enable the minor mode:
+
+```elisp
+(recentf-excl 1)
+```
 
 ## Contribute
 

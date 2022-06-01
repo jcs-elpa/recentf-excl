@@ -5,7 +5,7 @@ EASK ?= eask
 
 .PHONY: clean checkdoc lint package install compile test
 
-ci: clean package install compile
+ci: clean package install compile test
 
 package:
 	@echo "Packaging..."
@@ -21,7 +21,15 @@ compile:
 
 test:
 	@echo "Testing..."
-	$(EASK) ert ./test/*.el
+	$(EASK) test ert ./test/*.el
+
+checkdoc:
+	@echo "Run checkdoc..."
+	$(EASK) lint checkdoc
+
+lint:
+	@echo "Run package-lint..."
+	$(EASK) lint package
 
 clean:
 	$(EASK) clean-all

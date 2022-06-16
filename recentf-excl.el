@@ -4,11 +4,10 @@
 ;; Created date 2022-05-23 19:01:51
 
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
-;; Description: Exclude commands for recent files
-;; Keyword: excl exclude recentf
+;; URL: https://github.com/jcs-elpa/recentf-excl
 ;; Version: 0.1.0
 ;; Package-Requires: ((emacs "26.1"))
-;; URL: https://github.com/jcs-elpa/recentf-excl
+;; Keywords: excl exclude recentf
 
 ;; This file is NOT part of GNU Emacs.
 

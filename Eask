@@ -2,6 +2,9 @@
          "0.1.0"
          "Exclude commands for recent files")
 
+(website-url "https://github.com/jcs-elpa/recentf-excl")
+(keywords "excl" "exclude" "recentf")
+
 (package-file "recentf-excl.el")
 
 (source "gnu")

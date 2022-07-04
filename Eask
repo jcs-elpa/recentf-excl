@@ -3,7 +3,7 @@
          "Exclude commands for recent files")
 
 (website-url "https://github.com/jcs-elpa/recentf-excl")
-(keywords "excl" "exclude" "recentf")
+(keywords "convenience" "excl" "exclude" "recentf")
 
 (package-file "recentf-excl.el")
 

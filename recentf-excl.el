@@ -7,7 +7,7 @@
 ;; URL: https://github.com/jcs-elpa/recentf-excl
 ;; Version: 0.1.0
 ;; Package-Requires: ((emacs "26.1"))
-;; Keywords: excl exclude recentf
+;; Keywords: convenience excl exclude recentf
 
 ;; This file is NOT part of GNU Emacs.
 

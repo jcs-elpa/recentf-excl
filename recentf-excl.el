@@ -57,13 +57,19 @@
   "Advice bind FNC and ARGS."
   (recentf-excl-it (apply fnc args)))
 
+(defun recentf-excl--track-opened-file (fnc &rest args)
+  "Control of track opened file."
+  (when recentf-excl-tracking-p (apply fnc args)))
+
 (defun recentf-excl-mode--enable ()
   "Enable function `recentf-excl-mode'."
+  (advice-add 'recentf-track-opened-file :around #'recentf-excl--track-opened-file)
   (dolist (command recentf-excl-commands)
     (advice-add command :around #'recentf-excl--adv-around)))
 
 (defun recentf-excl-mode--disable ()
   "Disable function `recentf-excl-mode'."
+  (advice-remove 'recentf-track-opened-file #'recentf-excl--track-opened-file)
   (dolist (command recentf-excl-commands)
     (advice-remove command #'recentf-excl--adv-around)))
 

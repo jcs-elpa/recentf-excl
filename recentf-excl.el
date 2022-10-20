@@ -75,7 +75,7 @@
 
 ;;;###autoload
 (define-minor-mode recentf-excl-mode
-  "Minor mode 'recentf-excl-mode'."
+  "Minor mode `recentf-excl-mode'."
   :global t
   :require 'recentf-excl-mode
   :group 'recentf-excl

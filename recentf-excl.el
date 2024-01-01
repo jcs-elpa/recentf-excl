@@ -1,6 +1,6 @@
 ;;; recentf-excl.el --- Exclude commands for recent files  -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2022  Shen, Jen-Chieh
+;; Copyright (C) 2022-2024  Shen, Jen-Chieh
 ;; Created date 2022-05-23 19:01:51
 
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>

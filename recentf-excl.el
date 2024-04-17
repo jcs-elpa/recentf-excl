@@ -6,7 +6,7 @@
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/jcs-elpa/recentf-excl
 ;; Version: 0.1.0
-;; Package-Requires: ((emacs "26.1"))
+;; Package-Requires: ((emacs "26.1") (msgu "0.1.0"))
 ;; Keywords: convenience excl exclude recentf
 
 ;; This file is NOT part of GNU Emacs.
@@ -30,6 +30,8 @@
 ;;
 
 ;;; Code:
+
+(require 'msgu)
 
 (defgroup recentf-excl nil
   "Exclude commands for recent files."
@@ -109,7 +111,7 @@
 (defun recentf-excl-add-commands (command)
   "Add COMMAND to exclude list."
   (let ((commands (recentf-excl--listify command)))
-    (nconc recentf-excl-commands lst)
+    (nconc recentf-excl-commands commands)
     (recentf-excl--re-enable-mode-if-was-enabled #'recentf-excl-mode)))
 
 (provide 'recentf-excl)

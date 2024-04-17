@@ -81,7 +81,9 @@
   (recentf-excl-it (apply fnc args)))
 
 (defun recentf-excl--track-opened-file (fnc &rest args)
-  "Control of track opened file."
+  "Control of track opened file.
+
+Advice arguments FNC and ARGS."
   (when recentf-excl-tracking-p (apply fnc args)))
 
 (defun recentf-excl-mode--enable ()

@@ -47,6 +47,27 @@
 (defvar recentf-excl-tracking-p t
   "If non-nil, track the opened file.")
 
+;;
+;;; Util
+
+(defun recentf-excl--re-enable-mode (modename)
+  "Re-enable the MODENAME."
+  (msgu-silent
+    (funcall-interactively modename -1) (funcall-interactively modename 1)))
+
+(defun recentf-excl--re-enable-mode-if-was-enabled (modename)
+  "Re-enable the MODENAME if was enabled."
+  (when (boundp modename)
+    (when (symbol-value modename) (recentf-excl--re-enable-mode modename))
+    (symbol-value modename)))
+
+(defun recentf-excl--listify (obj)
+  "Turn OBJ to list."
+  (if (listp obj) obj (list obj)))
+
+;;
+;;; Core
+
 ;;;###autoload
 (defmacro recentf-excl-it (&rest body)
   "Execute BODY and ignore recent files."
@@ -80,6 +101,16 @@
   :require 'recentf-excl-mode
   :group 'recentf-excl
   (if recentf-excl-mode (recentf-excl-mode--enable) (recentf-excl-mode--disable)))
+
+;;
+;;; Users
+
+;;;###autoload
+(defun recentf-excl-add-commands (command)
+  "Add COMMAND to exclude list."
+  (let ((commands (recentf-excl--listify command)))
+    (nconc recentf-excl-commands lst)
+    (recentf-excl--re-enable-mode-if-was-enabled #'recentf-excl-mode)))
 
 (provide 'recentf-excl)
 ;;; recentf-excl.el ends here

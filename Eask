@@ -1,3 +1,5 @@
+;; -*- mode: eask; lexical-binding: t -*-
+
 (package "recentf-excl"
          "0.1.0"
          "Exclude commands for recent files")

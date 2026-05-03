@@ -42,7 +42,7 @@
 
 (defcustom recentf-excl-commands nil
   "List of commands to ignore recent files."
-  :type 'list
+  :type '(list symbol)
   :group 'recentf-excl)
 
 ;;;###autoload
